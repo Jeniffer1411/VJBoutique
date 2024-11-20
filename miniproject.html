@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> VJ Boutique </title>
+    <link rel="icon" href="logo.jpg">
+    <link rel="stylesheet" href="miniproject.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1>VJ Boutique</h1>
+        <nav class="navigation">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="quotes">
+        <h2>Style that Speaks</h2>
+        <p>Discover the latest trends in fashion at VJ Boutique.</p>
+        <button>Shop Now</button>
+    </section>
+
+    <section id="products" class="products">
+        <h2>Featured Products</h2>
+
+        <div class="filter">
+            <label for="price">Filter by Price:</label>
+            <input type="number" id="min-price" min="0" step="500" placeholder="Min Price">
+            <input type="number" id="max-price" min="5000" step="500" placeholder="Max Price">
+            <label for="category">Category:</label>
+            <select id="category">
+                <option value="all">All</option>
+                <option value="women">Women</option>
+                <option value="men">Men</option>
+                <option value="kid">Kids</option>
+                <option value="shoes">Shoes</option>
+                <option value="bags">Bags</option>
+                <option value="accessories">Accessories</option>
+                <option value="jackets">Jackets</option>
+            </select>
+
+            <label for="color">Colors:</label>
+            <select id="color">
+                <option value="all">All</option>
+                <option value="white">White</option>
+                <option value="black">Black</option>
+                <option value="pink">Pink</option>
+                <option value="red">Red</option>
+                <option value="green">Green</option>
+                <option value="blue">Blue</option>
+                <option value="grey">Grey</option>
+                <option value="violet">Violet</option>
+            </select>
+            <button id="apply" onclick="filterProducts()">Apply Filters</button>
+        </div>
+    
+
+        <div class="productlist">
+            <div class="product">
+                <img src="product1.jpg" alt="Product 1">
+                <h3>Elegant Dress</h3>
+                <p>Rs.18,480 <span id="rs"> Rs.22,000 </span> <span id="off"> [16% Off ]</span></p>
+                <div class="color-options">
+                    <span style="background-color: red;"></span>
+                    <span style="background-color: blue;"></span>
+                    <span style="background-color: black;"></span>
+                </div>
+                <div class="actions">
+                    <button>Add to Cart</button>
+                    <button>Buy Now</button>
+                </div>
+            </div>
+            
+            <div class="product">
+                <img src="product2.jpg" alt="Product 2">
+                <h3>Stylish Shoes</h3>
+                <p>Rs.3,500 <span id="rs"> Rs.5,000 </span> <span id="off"> [30% Off ]</span></p>
+                <div class="color-options">
+                    <span style="background-color: #ff87d7;"></span>
+                    <span style="background-color: #5bc9eb;"></span>
+                    <span style="background-color: black;"></span>
+                </div>
+                <div class="actions">
+                    <button>Add to Cart</button>
+                    <button>Buy Now</button>
+                </div>
+            </div>
+            <div class="product">
+                <img src="product3.jpg" alt="Product 3">
+                <h3>Casual Handbag</h3>
+                <p>Rs.11,550 <span id="rs"> Rs.15,000 </span> <span id="off"> [23% Off ]</span></p>
+                <div class="color-options">
+                    <span style="background-color: #a572c2;"></span>
+                    <span style="background-color: #58bf72;"></span>
+                    <span style="background-color: #bf8658;"></span>
+                </div>
+                <div class="actions">
+                    <button>Add to Cart</button>
+                    <button>Buy Now</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="productlist">
+            <div class="product">
+                <img src="product4.jpg" alt="Product 1">
+                <h3>Casual Dress</h3>
+                <p>Rs.4,700 <span id="rs"> Rs.5,600 </span> <span id="off"> [16% Off ]</span></p>
+                <div class="color-options">
+                    <span style="background-color: #cf8138;"></span>
+                    <span style="background-color: #7ffaf6;"></span>
+                    <span style="background-color: white;"></span>
+                </div>
+                <div class="actions">
+                    <button>Add to Cart</button>
+                    <button>Buy Now</button>
+                </div>
+            </div>
+            
+            <div class="product">
+                <img src="product5.jpg" alt="Product 2">
+                <h3>Rocking Kids</h3>
+                <p>Rs.1,540 <span id="rs"> Rs.2,000 </span> <span id="off"> [23% Off ]</span></p>
+                <div class="color-options">
+                    <span style="background-color: #ff87d7;"></span>
+                    <span style="background-color: #b6e7f6;"></span>
+                    <span style="background-color: #cf383d"></span>
+                </div>
+                <div class="actions">
+                    <button>Add to Cart</button>
+                    <button>Buy Now</button>
+                </div>
+            </div>
+            <div class="product">
+                <img src="product6.jpg" alt="Product 3">
+                <h3>Stunning Jewels</h3>
+                <p>Rs.11,999 <span id="rs"> Rs.15,999 </span> <span id="off"> [25% Off ]</span></p>
+                <div class="color-options">
+                    <span style="background-color: red;"></span>
+                    <span style="background-color: #eb3495;"></span>
+                    <span style="background-color: green;"></span>
+                </div>
+                <div class="actions">
+                    <button>Add to Cart</button>
+                    <button>Buy Now</button>
+                </div>
+            </div>
+        </div>
+    
+    <div>
+        <button id="shop" onclick="filterProducts()">Shop More</button>
+    </div>
+
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <p>At VJ Boutique, we offer a curated selection of apparel and accessories to fit every woman's unique sense of style. Our mission is to provide high-quality products with exceptional customer service. Shop with us and discover your new favorite outfit!
+           Beyond helping you look your best, Impressions Online Boutique strives to make every purchase a positive experience. Our top priorities are excellent customer service, exceptionally quick order processing, ultra fast shipping times, and a hassle-free return policy.
+           We value your feedback, whether positive or constructive and we are continuously working to improve your experience.If you are a first-time visitor or long-standing customer, we hope you will be thrilled with every aspect of your Impressions Online Boutique shopping experience.
+        </p>
+    </section>
+
+       
+    <footer id="contact" class="footer">
+        <h2>Contact Us</h2>
+        <p>Email: vjboutique@gmail.com</p>
+        <p>Phone: +91 9585495425</p>
+        <p>Follow us on:</p>
+        <div class="socialmedia">
+            <a href="#">Facebook</a> | 
+            <a href="#">Instagram</a> | 
+            <a href="#">Twitter</a>
+        </div>
+        <p>&copy; 2024 VJ Boutique. All Rights Reserved.</p>
+    </footer>
+
+</body>
+
+</html>
